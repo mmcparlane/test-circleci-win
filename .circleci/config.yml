@@ -9,8 +9,12 @@ jobs:
       name: win/default
     steps:
       - run:
-         command: ls /usr/bin
-         shell: bash.exe
+         command: choco install msys2
+         shell: cmd.exe
       - run:
-         command: ls /etc
-         shell: bash.exe
+         command: C:\\tools\\msys64\\msys2_shell.cmd -defterm -no-start -c "pacman --sync --noconfirm python"
+         shell: cmd.exe
+      - run:
+         command: C:\\tools\\msys64\\msys2_shell.cmd -defterm -no-start -c "python -c 'import os; print(os.name)'"
+         shell: cmd.exe
+         
