@@ -9,7 +9,7 @@ jobs:
       name: win/default
     steps:
       - run:
-         command: pacman --noconfirm -S python
+         command: uname
          shell: bash.exe
       - run:
          command: python --version
