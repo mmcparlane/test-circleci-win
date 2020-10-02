@@ -9,9 +9,8 @@ jobs:
       name: win/default
     steps:
       - run:
-         command: uname
+         command: ls /usr/bin
          shell: bash.exe
       - run:
-         command: python --version
+         command: ls /etc
          shell: bash.exe
-
