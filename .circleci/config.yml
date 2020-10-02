@@ -9,7 +9,7 @@ jobs:
       name: win/default
     steps:
       - run:
-         command: choco install msys2
+         command: choco --confirm install msys2
          shell: cmd.exe
       - run:
          command: C:\\tools\\msys64\\msys2_shell.cmd -defterm -no-start -c "pacman --sync --noconfirm python"
